@@ -1,0 +1,9 @@
+scheduler.dateFormat = yyyy年MM月dd日
+schedule.title = 用件
+schedule.start = 開始日時
+schedule.end = 終了日時
+
+error.minLength = 短すぎ
+error.maxLength = 長すぎ
+add.title = スケジュールを追加してくれい
+add.send = 追加

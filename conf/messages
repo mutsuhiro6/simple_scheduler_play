@@ -1,0 +1,9 @@
+scheduler.dateFormat = EEE, dd MMM yyyy HH:mm:ss
+schedule.title = Title
+schedule.start = Start date
+schedule.end = End date
+
+error.minLength = Too short title.
+error.maxLength = Too long title.
+add.title = Please add a schedule
+add.send = Add
