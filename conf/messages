@@ -1,3 +1,4 @@
+list.title = Simple Schedule App
 scheduler.dateFormat = EEE, dd MMM yyyy HH:mm:ss
 schedule.title = Title
 schedule.start = Start date
