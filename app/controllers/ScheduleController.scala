@@ -20,6 +20,7 @@ class ScheduleController @Inject()(cc: ControllerComponents) extends AbstractCon
     )
     (Schedule.apply)
     (Schedule.unapply)
+      .verifying("invalid start and end date", a => (a.start compareTo a.end) < 0)
   )
 
   def list(date: Option[String]) = Action { implicit request =>

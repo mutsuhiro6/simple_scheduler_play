@@ -5,5 +5,6 @@ schedule.end = End date
 
 error.minLength = Too short title.
 error.maxLength = Too long title.
+error.invalidPeriod = Start date must be earlier than end date.
 add.title = Please add a schedule
 add.send = Add

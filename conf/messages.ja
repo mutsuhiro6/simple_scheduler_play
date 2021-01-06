@@ -3,7 +3,8 @@ schedule.title = 用件
 schedule.start = 開始日時
 schedule.end = 終了日時
 
-error.minLength = 短すぎ
-error.maxLength = 長すぎ
+error.minLength = 用件短すぎるで。
+error.maxLength = 用件長すぎるで。
+error.invalidPeriod = 終了日時より開始日時を早くしてくれい。
 add.title = スケジュールを追加してくれい
 add.send = 追加
