@@ -24,3 +24,4 @@ libraryDependencies ++= Seq(
   "org.scalikejdbc"        %% "scalikejdbc-test"             % scalikejdbcVersion % "test"
 )
 
+libraryDependencies += "mysql" % "mysql-connector-java" % "8.0.22"
