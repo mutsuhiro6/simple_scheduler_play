@@ -1,8 +1,8 @@
 list.title = シンプルスケジュールあっぷ
 scheduler.dateFormat = yyyy年MM月dd日
-schedule.title = 用件
-schedule.start = 開始日時
-schedule.end = 終了日時
+schedule.name = 用件
+schedule.beginAt = 開始日時
+schedule.endAt = 終了日時
 
 error.minLength = 用件短すぎるで。
 error.maxLength = 用件長すぎるで。
