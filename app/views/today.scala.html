@@ -1,0 +1,43 @@
+@import models.Schedule
+
+@import java.time.format.DateTimeFormatter
+
+
+@(schedules: Seq[Schedule])(implicit messages: Messages)
+
+@main("Today") {
+    <div class="container">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Begin date</th>
+                    <th scope="col">End date</th>
+                </tr>
+            </thead>
+            <tbody>
+            @for(schedule <- schedules) {
+                <tr>
+                    <th scope="row">@schedule.id</th>
+                    <td class="name">@schedule.name</td>
+                    <td class="begin-date">
+                    @{
+                        val ptn = Messages("scheduler.dateFormat")
+                        val fmt = DateTimeFormatter.ofPattern(ptn, messages.lang.toLocale)
+                        schedule.beginAt.format(fmt)
+                    }
+                    </td>
+                    <td class="end-date">
+                    @{
+                        val ptn = Messages("scheduler.dateFormat")
+                        val fmt = DateTimeFormatter.ofPattern(ptn, messages.lang.toLocale)
+                        schedule.endAt.format(fmt)
+                    }
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}
