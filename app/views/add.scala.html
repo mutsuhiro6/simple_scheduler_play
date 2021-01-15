@@ -1,36 +1,39 @@
-@(form: Form[Schedule])(implicit messages: Messages)
+@import java.time.OffsetDateTime
+@import java.time.format.DateTimeFormatter
 
-<!doctype html>
-<html lang="en">
-    <head>
-        @* Here's where we render the page title `String`. *@
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <title>Add Schedule</title>
-    </head>
-    <body>
-        <h1>@Messages("add.title")</h1>
-        @for(error <- form.errors){
-            <p class="text-danger" id="error">@Messages(error.message)</p>
+@(form: Form[ScheduleForm])(implicit messages: Messages)
+
+@main("Add") {
+    <div class="container">
+        @for(error <- form.errors) {
+            <p class="text-danger" id="" error>@Messages(error.message)</p>
         }
-        <div class="container">
-        <form method="POST" action="/add" width>
-
+        <form method="POST" action="/">
             <div class="form-group">
-            <label for="title">@Messages("schedule.title") </label>
-            <input type="text" class="form-control" id="title" name="title" size="10">
+                <label for="name">@Messages("schedule.name")</label>
+                <input class="form-control" type="text" id="name" name="name" placeholder="Name">
             </div>
             <div class="form-group">
-            <label for="start">@Messages("schedule.start")</label>
-            <input type="date" class="date-cell" id="start" name="start">
+                <label for="beginAt">@Messages("schedule.beginAt")</label>
+                <input class="form-control"
+                type="date"
+                value="@{
+                    OffsetDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
+                }"
+                id="beginAt"
+                name="beginAt">
             </div>
             <div class="form-group">
-            <label for="end">@Messages("schedule.end")</label>
-            <input type="date" class="date-picker" id="end" name="end">
+                <label for="endAt">@Messages("schedule.endAt")</label>
+                <input class="form-control"
+                type="date"
+                value="@{
+                    OffsetDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
+                }"
+                id="endAt"
+                name="endAt">
             </div>
-
-            <button type="submit" class="btn btn-default">@Messages("add.send")</button>
-
+            <button type="submit" class="btn btn-primary">@Messages("add.send")</button>
         </form>
-        </div>
-    </body>
-</html>
+    </div>
+}
