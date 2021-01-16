@@ -1,5 +1,18 @@
 # simple_scheduler_play
 
+- https://gentle-dawn-73192.herokuapp.com/
+- Play Frameworkとデータベースの学習として、予定表/Todoリストアプリを作成した。
+
+## 学んだこと
+
+- Play FrameworkによるWebアプリケーション開発のキホンのキ。
+- HTML/CSSかじり。(Bootstrapでごまかし。)  
+- MySQLやPostgreSQLの基本操作。
+- Webアプリケーションとデータベースの接続。
+    - scalikejdbcを利用。
+- Herokuへのデプロイ、Heroku上のPostgreSQL databaseへの接続。
+- Heroku CLI操作。
+
 ## 要件
 
 - [dwango テキスト](https://hexx.github.io/scala_text/introduction-of-web-application-2nd-day.html)
