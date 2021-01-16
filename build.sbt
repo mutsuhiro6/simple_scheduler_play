@@ -24,4 +24,7 @@ libraryDependencies ++= Seq(
   "org.scalikejdbc"        %% "scalikejdbc-test"             % scalikejdbcVersion % "test"
 )
 
-libraryDependencies += "mysql" % "mysql-connector-java" % "8.0.22"
+// https://mvnrepository.com/artifact/org.postgresql/postgresql
+libraryDependencies += "org.postgresql" % "postgresql" % "42.2.18"
+
+// libraryDependencies += "mysql" % "mysql-connector-java" % "8.0.22"
